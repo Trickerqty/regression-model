@@ -14,9 +14,8 @@ Regression is a **supervised machine learning technique** used to predict **cont
 It learns the relationship between one or more **independent variables (features)** and a **dependent variable (target)**.
 
 Mathematically:
-\[
-y = f(X) + \epsilon
-\]
+> **y = f(X) + ε**
+
 Where:
 - **X** → Input features (e.g., mean temperature, rainfall, wind speed)  
 - **y** → Output variable (apparent temperature max)  
@@ -67,10 +66,10 @@ Choosing a regression algorithm depends on **data patterns**, **relationships**,
 
 | Metric | Formula | Description | Goal |
 |---------|----------|-------------|------|
-| **MAE (Mean Absolute Error)** | \( \frac{1}{n}\sum |y_i - \hat{y}_i| \) | Average absolute deviation | Lower is better |
-| **MSE (Mean Squared Error)** | \( \frac{1}{n}\sum (y_i - \hat{y}_i)^2 \) | Penalizes large errors | Lower is better |
-| **RMSE (Root MSE)** | \( \sqrt{MSE} \) | Error in same unit as target | Lower is better |
-| **R² Score (Coefficient of Determination)** | \( 1 - \frac{SS_{res}}{SS_{tot}} \) | Measures model fit quality | Closer to 1 is better |
+| **MAE (Mean Absolute Error)** | **MAE = (1/n) Σ (yᵢ − ŷᵢ)** | Average absolute difference between predicted and actual values | Lower is better |
+| **MSE (Mean Squared Error)** | **MSE = (1/n) Σ (yᵢ − ŷᵢ)²** | Penalizes large errors more heavily | Lower is better |
+| **RMSE (Root Mean Squared Error)** | **RMSE = √MSE** | Same scale as the target variable | Lower is better |
+| **R² Score (Coefficient of Determination)** | **R² = 1 − (SS_res / SS_tot)** | Measures how well the model fits the data | Closer to 1 is better |
 
 ---
 
@@ -107,20 +106,30 @@ The **best model** will be selected based on **lowest MSE/MAE** and **highest R�
 ## 7. Mathematical Foundation
 
 ### Linear Regression Equation
-\[
-y = \beta_0 + \beta_1x_1 + \beta_2x_2 + ... + \beta_nx_n + \epsilon
-\]
-**Goal:** minimize Mean Squared Error (MSE).
+
+**y = β₀ + β₁x₁ + β₂x₂ + ... + βₙxₙ + ε**
+
+Where:  
+- **y** → Predicted (dependent) variable  
+- **x₁, x₂, ... xₙ** → Input (independent) features  
+- **β₀, β₁, ... βₙ** → Model coefficients (weights)  
+- **ε** → Error term (unexplained variation)
+
+**Goal:** Minimize the difference between predicted and actual values.
+
+---
 
 ### Optimization Objective
-\[
-\text{Minimize: } \frac{1}{n}\sum_{i=1}^n (y_i - \hat{y}_i)^2
-\]
 
-Where:
-- \( y_i \) = actual value  
-- \( \hat{y}_i \) = predicted value  
-- \( n \) = number of samples  
+**Minimize:**  
+**MSE = (1/n) Σ (yᵢ − ŷᵢ)²**
+
+Where:  
+- **yᵢ** → Actual observed value  
+- **ŷᵢ** → Predicted value from the model  
+- **n** → Total number of samples  
+
+The model adjusts its coefficients (**β**) to minimize the Mean Squared Error (MSE), achieving the best possible line of fit between predictions and actual observations.
 
 ---
 
