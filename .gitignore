@@ -10,8 +10,8 @@ __pycache__/
 .ipynb_checkpoints/
 
 # Data files
-data/*.csv
-*.xlsx
+#data/*.csv
+#*.xlsx
 
 # OS junk
 .DS_Store
