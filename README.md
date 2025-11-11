@@ -238,3 +238,40 @@ Philippines
 ---
 
 > _“Regression models help us uncover continuous relationships in data — enabling informed decisions, forecasting, and deeper understanding of patterns hidden in numbers.”_
+
+
+## Environment Setup
+
+Before running this project, set up a clean Python virtual environment.
+
+### 1. Create and activate the virtual environment
+```bash
+python -m venv venv
+```
+```bash
+venv\Scripts\activate
+```
+Reminder: Always make sure you see (venv) in your terminal before installing or running anything!
+Example:
+
+```bash
+(venv) PS C:\Users\[name]\Desktop\Regression>
+```
+
+### 2. Install required libraries
+```bash
+pip install -r requirements.txt
+```
+
+or, for the first setup:
+```bash
+pip install pandas numpy matplotlib seaborn scikit-learn jupyterlab
+```
+```bash
+pip freeze > requirements.txt
+```
+
+### 3. Launch JupyterLab
+```bash
+jupyter lab
+```
