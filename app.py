@@ -161,7 +161,7 @@ if mask_fore.any():
     )
 
 # ---------- Philippine seasons for this year ----------
-year = int(selected_year)
+year = int(selected_year) # type: ignore
 
 # Cool Dry: Dec, Jan, Feb
 cool_spans = [
@@ -176,15 +176,15 @@ hot_span = (datetime(year, 3, 1), datetime(year, 5, 31))
 rain_span = (datetime(year, 6, 1), datetime(year, 11, 30))
 
 for start, end in cool_spans:
-    ax.axvspan(start, end, color="lightskyblue", alpha=0.2, label="Cool Dry (Dec–Feb)")
+    ax.axvspan(start, end, color="lightskyblue", alpha=0.2, label="Cool Dry (Dec–Feb)") # type: ignore
 
 ax.axvspan(
-    hot_span[0], hot_span[1],
+    hot_span[0], hot_span[1], # type: ignore
     color="navajowhite", alpha=0.25, label="Hot Dry (Mar–May)"
 )
 
 ax.axvspan(
-    rain_span[0], rain_span[1],
+    rain_span[0], rain_span[1], # type: ignore
     color="lightgreen", alpha=0.2, label="Rainy (Jun–Nov)"
 )
 
